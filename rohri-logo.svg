@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" width="900" height="900" role="img" aria-label="Rohri — Where History Flows with the Indus">
+  <title>Rohri — Where History Flows with the Indus</title>
+  <desc>Logo for rohri.net: a red arched bridge over the blue Indus on a warm yellow field, with the wordmark ROHRI and the tagline "Where History Flows with the Indus".</desc>
+
+  <!-- Color tokens -->
+  <defs>
+    <style>
+      .bg     { fill: #F6C95A; }
+      .red    { fill: #E63329; }
+      .red-d  { fill: #C2261D; }
+      .blue   { fill: #1B4F87; }
+      .blue-d { fill: #143A66; }
+      .deck   { fill: #E63329; }
+      .water  { fill: none; stroke: #1B4F87; stroke-width: 16; stroke-linecap: round; }
+      .pier   { fill: #1B4F87; }
+    </style>
+
+    <!-- Wave path used twice -->
+    <path id="wave"
+          d="M 130 470
+             C 190 440, 240 500, 300 470
+             S 410 440, 470 470
+             S 580 500, 640 470
+             S 750 440, 770 470" />
+  </defs>
+
+  <!-- Yellow background -->
+  <rect class="bg" width="900" height="900" rx="24" ry="24"/>
+
+  <!-- ===== Bridge ===== -->
+  <g transform="translate(0,10)">
+
+    <!-- Main outer arch (thick red) -->
+    <path class="red"
+          d="M 175 410
+             C 175 200, 725 200, 725 410
+             L 705 410
+             C 705 230, 195 230, 195 410 Z"/>
+
+    <!-- Inner soffit shadow on the arch -->
+    <path class="red-d"
+          d="M 215 410
+             C 215 250, 685 250, 685 410
+             L 705 410
+             C 705 230, 195 230, 195 410 Z"
+          opacity="0.55"/>
+
+    <!-- Vertical suspender cables (blue) -->
+    <g class="blue">
+      <rect x="248" y="252" width="10" height="158"/>
+      <rect x="298" y="232" width="10" height="178"/>
+      <rect x="348" y="220" width="10" height="190"/>
+      <rect x="398" y="214" width="10" height="196"/>
+      <rect x="448" y="212" width="10" height="198"/>
+      <rect x="498" y="214" width="10" height="196"/>
+      <rect x="548" y="220" width="10" height="190"/>
+      <rect x="598" y="232" width="10" height="178"/>
+      <rect x="648" y="252" width="10" height="158"/>
+    </g>
+
+    <!-- Diagonal arch struts (subtle red highlights on the right haunch) -->
+    <g class="red" opacity="0.85">
+      <polygon points="660,260 690,250 700,275 670,285"/>
+      <polygon points="615,238 645,228 655,253 625,263"/>
+    </g>
+
+    <!-- Bridge deck (thick red beam) -->
+    <rect class="deck" x="150" y="395" width="600" height="60" rx="6"/>
+    <!-- Deck shadow line -->
+    <rect class="red-d" x="150" y="440" width="600" height="15" opacity="0.85"/>
+
+    <!-- Left and right deck end caps (curved abutments) -->
+    <path class="red"
+          d="M 150 395
+             q -22 30 0 60
+             l 22 0
+             l 0 -60 z"/>
+    <path class="red"
+          d="M 750 395
+             q 22 30 0 60
+             l -22 0
+             l 0 -60 z"/>
+
+    <!-- Piers under the deck dipping into water -->
+    <rect class="red" x="170" y="450" width="40" height="35"/>
+    <rect class="red" x="690" y="450" width="40" height="35"/>
+  </g>
+
+  <!-- ===== Indus water (two stacked wavy lines) ===== -->
+  <g class="water">
+    <use href="#wave"/>
+    <use href="#wave" transform="translate(0,30)"/>
+  </g>
+
+  <!-- ===== Wordmark ===== -->
+  <g class="blue" font-family="'Helvetica Neue', Arial, sans-serif" text-anchor="middle">
+    <text x="450" y="640"
+          font-size="150"
+          font-weight="900"
+          letter-spacing="6">ROHRI</text>
+
+    <text x="450" y="735"
+          font-size="58"
+          font-weight="500"
+          letter-spacing="0.5">Where History Flows</text>
+    <text x="450" y="800"
+          font-size="58"
+          font-weight="500"
+          letter-spacing="0.5">with the Indus</text>
+  </g>
+</svg>
